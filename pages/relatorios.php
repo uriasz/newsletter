@@ -1,7 +1,5 @@
 <?php
 define('SYSTEM_INIT', true);
-require_once __DIR__ . '/../includes/auth.php';
-requererLogin();
 
 // Busca dados para estatísticas
 $campanhaId = $_GET['id'] ?? '';

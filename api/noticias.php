@@ -4,9 +4,6 @@ define('SYSTEM_INIT', true);
  * API para buscar notícias do banco de dados
  */
 
-require_once __DIR__ . '/../includes/auth.php';
-requererLogin();
-
 header('Content-Type: application/json');
 
 // Inclui configuração do banco de dados

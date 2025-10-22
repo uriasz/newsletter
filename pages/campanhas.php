@@ -1,7 +1,5 @@
 <?php
 define('SYSTEM_INIT', true);
-require_once __DIR__ . '/../includes/auth.php';
-requererLogin();
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
