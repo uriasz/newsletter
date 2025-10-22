@@ -4,6 +4,12 @@
  * Implementa flock() para prevenir corrupção de dados em acessos concorrentes
  */
 
+// Bloquear acesso direto
+if (!defined('SYSTEM_INIT')) {
+    header('HTTP/1.0 403 Forbidden');
+    exit('Acesso direto não permitido');
+}
+
 /**
  * Lê um arquivo JSON e retorna um array PHP
  * @param string $arquivo Caminho do arquivo JSON

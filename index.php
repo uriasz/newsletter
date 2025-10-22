@@ -1,4 +1,7 @@
 <?php
+// Inicializa o sistema
+define('SYSTEM_INIT', true);
+
 require_once __DIR__ . '/includes/auth.php';
 requererLogin();
 ?>

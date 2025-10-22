@@ -1,4 +1,5 @@
 <?php
+define('SYSTEM_INIT', true);
 /**
  * API para buscar notícias do banco de dados
  */

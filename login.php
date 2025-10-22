@@ -1,3 +1,7 @@
+<?php
+// Inicializa o sistema
+define('SYSTEM_INIT', true);
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

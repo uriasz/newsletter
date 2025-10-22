@@ -4,6 +4,9 @@
  * Este script registra quando um e-mail é aberto e retorna uma imagem transparente
  */
 
+// Inicializa o sistema
+define('SYSTEM_INIT', true);
+
 require_once __DIR__ . '/includes/mailer.php';
 
 // Recebe os parâmetros
