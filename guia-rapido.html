@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Rápido - Newsletter System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            padding: 20px;
+            color: #1e293b;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ec4899;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #ec4899;
+        }
+        .step h2 {
+            color: #ec4899;
+            margin-bottom: 15px;
+        }
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #ec4899;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .code {
+            background: #1e293b;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .alert {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #d1fae5;
+            border: 2px solid #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        ul { margin-left: 20px; margin-top: 10px; }
+        li { margin: 8px 0; }
+        a {
+            color: #ec4899;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover { text-decoration: underline; }
+        .btn {
+            display: inline-block;
+            background: #ec4899;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #db2777;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+        .buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📤 Guia Rápido de Instalação via FTP</h1>
+        
+        <div class="alert">
+            <strong>⚠️ ANTES DE COMEÇAR:</strong>
+            <p>Este sistema foi instalado via FTP no servidor da prefeitura. Siga os passos abaixo em ordem.</p>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">1</span> Primeiro Teste</h2>
+            <p>Acesse este arquivo para verificar se o PHP está funcionando:</p>
+            <div class="buttons">
+                <a href="teste-simples.php" class="btn">🔍 Teste Simples</a>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">2</span> Diagnóstico Completo</h2>
+            <p>Se o teste simples funcionar, execute o diagnóstico completo:</p>
+            <div class="buttons">
+                <a href="diagnostico.php" class="btn">🔬 Diagnóstico Completo</a>
+            </div>
+            <p><small>Este arquivo vai verificar TUDO: PHP, extensões, permissões, arquivos...</small></p>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">3</span> Problemas com Erro 500?</h2>
+            <p>Se aparecer "Internal Server Error", o problema é o .htaccess:</p>
+            <ul>
+                <li>Via FTP, renomeie <code>.htaccess</code> para <code>.htaccess.old</code></li>
+                <li>Ou substitua pelo arquivo <code>.htaccess.minimal</code></li>
+                <li>Ou delete completamente o .htaccess</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">4</span> Configurar SITE_URL</h2>
+            <p>Edite o arquivo <code>includes/config.php</code> e ajuste:</p>
+            <div class="code">
+define('SITE_URL', 'https://www.pjf.mg.gov.br/newsletter');
+            </div>
+            <p><small>Ajuste conforme o caminho real no servidor!</small></p>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">5</span> Verificar Permissões</h2>
+            <p>No FileZilla, clique com botão direito → Permissões:</p>
+            <ul>
+                <li><strong>Pastas:</strong> 755 (rwxr-xr-x)</li>
+                <li><strong>Arquivos PHP:</strong> 644 (rw-r--r--)</li>
+                <li><strong>Pasta data/:</strong> 755 (IMPORTANTE!)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">6</span> Acessar o Sistema</h2>
+            <p>Se tudo estiver OK, acesse o login:</p>
+            <div class="buttons">
+                <a href="login.php" class="btn">🔐 Fazer Login</a>
+            </div>
+            <p>Credenciais padrão:</p>
+            <div class="code">
+E-mail: admin@example.com
+Senha: password
+            </div>
+        </div>
+
+        <div class="success">
+            <h2>✅ Sistema Funcionando?</h2>
+            <p><strong>Próximos passos:</strong></p>
+            <ol>
+                <li>Altere a senha do admin imediatamente</li>
+                <li>Cadastre seu e-mail real</li>
+                <li>Configure o banco de notícias em <code>includes/db_noticias.php</code></li>
+                <li><strong style="color: red;">DELETE os arquivos de teste:</strong>
+                    <ul>
+                        <li>guia-rapido.html (este arquivo)</li>
+                        <li>teste-simples.php</li>
+                        <li>diagnostico.php</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h2>📚 Documentação Completa</h2>
+            <p>Para mais detalhes, consulte:</p>
+            <ul>
+                <li><strong>INSTALACAO_FTP.md</strong> - Guia completo de instalação via FTP</li>
+                <li><strong>SOLUCAO_ERRO_500.md</strong> - Solução de problemas</li>
+                <li><strong>README.md</strong> - Documentação geral do sistema</li>
+                <li><strong>API.md</strong> - Documentação da API</li>
+                <li><strong>NOTICIAS.md</strong> - Integração com banco de notícias</li>
+            </ul>
+        </div>
+
+        <div class="alert">
+            <h2>🆘 Precisa de Ajuda?</h2>
+            <p><strong>Erro persiste?</strong></p>
+            <ol>
+                <li>Execute o <a href="diagnostico.php">diagnóstico.php</a></li>
+                <li>Anote os erros mostrados</li>
+                <li>Consulte <strong>SOLUCAO_ERRO_500.md</strong></li>
+                <li>Entre em contato com TI da prefeitura: <code>webmaster@pjf.mg.gov.br</code></li>
+            </ol>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; color: #64748b;">
+            <p>Newsletter System - v1.0</p>
+            <p>Sistema de Gerenciamento de Newsletters com Design Rosa</p>
+        </div>
+    </div>
+</body>
+</html>

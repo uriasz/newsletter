@@ -1,0 +1,6 @@
+# .htaccess SUPER SIMPLES - Use este se o padrão causar erro 500
+
+# Apenas desabilitar listagem de diretórios
+Options -Indexes
+
+# Se mesmo assim der erro, delete este arquivo completamente
