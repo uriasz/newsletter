@@ -1,0 +1,22 @@
+# Arquivos de dados JSON
+data/*.json
+
+# Logs
+*.log
+
+# Configurações locais
+includes/config.php
+includes/db_noticias.php
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temporários
+*.tmp
+*.bak
+*~
